@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>{{page.title}}</title>
+  <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  {% include header.html %}
+
+  <main class="pt6 pa3 f2">
+    {{content}}
+  </main>
+  <script type="text/javascript">
+    (function($) {
+
+      $.fn.shuffle = function() {
+
+        var allElems = this.get(),
+          getRandom = function(max) {
+            return Math.floor(Math.random() * max);
+          },
+          shuffled = $.map(allElems, function() {
+            var random = getRandom(allElems.length),
+              randEl = $(allElems[random]).clone(true)[0];
+            allElems.splice(random, 1);
+            return randEl;
+          });
+
+        this.each(function(i) {
+          $(this).replaceWith($(shuffled[i]));
+        });
+
+        return $(shuffled);
+
+      };
+
+    })(jQuery);
+
+    $('article').shuffle();
+  </script>
+</body>
+
+</html>
