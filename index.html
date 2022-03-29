@@ -4,10 +4,6 @@ title: Rizal N. Ramadhan
 ---
 <div class="container">
   <article>
-    <img src="/assets/img/Untitled-IX-ver-3.png">
-    <p>Cystomatosis Mutagenesis (Specimen IX)</p>
-  </article>
-  <article>
     <img src="/assets/img/reject-humanity.png">
     <p>REJECT HUMANITY, RETURN TO FISH</p>
   </article>
@@ -18,10 +14,6 @@ title: Rizal N. Ramadhan
   <article>
     <img src="/assets/img/artwork-1540739191.jpg">
     <p>Untitled (Exhibited at Keyfabe: Makeshift Manifest @Studio Batur, Bandung 2018)</p>
-  </article>
-  <article>
-    <img src="/assets/img/render-test.png">
-    <p>[render test]</p>
   </article>
   <article>
     <p class="f1 shadow">DISPLACEMENT BEGETS DESPERATION BEGETS DISORDER</p>
@@ -56,42 +48,6 @@ title: Rizal N. Ramadhan
     <p>Cystomatosis Mutagenesis (Specimen XVIII)</p>
   </article>
   <article>
-    <img src="/assets/img/IMG_5209.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5213.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5215.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5220.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5242.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5243.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5250.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5252.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
-    <img src="/assets/img/IMG_5278.jpg">
-    <p>[work in progress]</p>
-  </article>
-  <article>
     <img src="/assets/img/Untitled-XXXI-2.png">
     <p>[Spectral Womb (Specimen XXXI 0.2)]</p>
   </article>
@@ -99,4 +55,13 @@ title: Rizal N. Ramadhan
     <img src="/assets/img/Untitled-XXXV-2.png">
     <p>[Cystomatosis Mutagenesis (Specimen XXXV 0.2)]</p>
   </article>
+
+  {%- for work in site.works -%}
+  <article>
+    <img src="{{ work.img | relative_url}}">
+    <div>
+      <a class="link red" href="{{work.url}}">{{work.title}} ---> CLICK</a>
+    </div>
+  </article>
+  {%- endfor -%}
 </div>
