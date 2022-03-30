@@ -7,31 +7,35 @@ title: Rizal N. Ramadhan
     <img src="/assets/img/reject-humanity.png">
     <p>REJECT HUMANITY, RETURN TO FISH</p>
   </article>
-  <article>
+  <!-- <article>
     <img src="/assets/img/Untitled-XXII.png">
     <p>Spectral Womb (Specimen XXII)</p>
-  </article>
-  <article>
+  </article> -->
+  <!-- <article>
     <img src="/assets/img/artwork-1540739191.jpg">
     <p>Untitled (Exhibited at Keyfabe: Makeshift Manifest @Studio Batur, Bandung 2018)</p>
-  </article>
+  </article> -->
   <article>
     <p class="f1 shadow">DISPLACEMENT BEGETS DESPERATION BEGETS DISORDER</p>
   </article>
-  <article>
+  <!-- <article>
     <img src="/assets/img/original_17db2d47272d4a0e2b7e276c02029bc7.png">
     <p>[unknown source]</p>
-  </article>
+  </article> -->
   <article>
+    <img src="/assets/img/IMG_5213.jpg">
+    <p>[work in progress]</p>
+  </article>
+  <!-- <article>
     <img src="/assets/img/IMG_0221.jpg">
     <p>Seniman Akhir Pekan (2017) <br>
       Glazed Earthenware <br>
       Variable Dimensions</p>
-  </article>
-  <article>
+  </article> -->
+  <!-- <article>
     <img src="/assets/img/Untitled-XXXV-3.png">
     <p>Cystomatosis Mutagenesis (Specimen XXXV)</p>
-  </article>
+  </article> -->
   <article>
     <img src="/assets/img/1624537351325.jpg">
   </article>
@@ -47,10 +51,10 @@ title: Rizal N. Ramadhan
     <img src="/assets/img/Untitled-XVIII.png">
     <p>Cystomatosis Mutagenesis (Specimen XVIII)</p>
   </article>
-  <article>
+  <!-- <article>
     <img src="/assets/img/Untitled-XXXI-2.png">
     <p>[Spectral Womb (Specimen XXXI 0.2)]</p>
-  </article>
+  </article> -->
   <article>
     <img src="/assets/img/Untitled-XXXV-2.png">
     <p>[Cystomatosis Mutagenesis (Specimen XXXV 0.2)]</p>
@@ -60,8 +64,14 @@ title: Rizal N. Ramadhan
   <article>
     <img src="{{ work.img | relative_url}}">
     <div>
-      <a class="link red" href="{{work.url}}">{{work.title}} ---> CLICK</a>
+      <a href="{{work.url}}">{{work.title}} ---> CLICK</a>
     </div>
+  </article>
+  {%- endfor -%}
+
+  {%- for item in site.data.shitpost -%}
+  <article>
+    <img src="{{ item.url | relative_url}}">
   </article>
   {%- endfor -%}
 </div>
