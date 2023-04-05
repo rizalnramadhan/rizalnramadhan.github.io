@@ -69,6 +69,12 @@ title: Rizal N. Ramadhan
   </article>
   {%- endfor -%}
 
+  {%- for item in site.data.wip -%}
+  <article>
+    <img src="{{ item.img | relative_url}}">
+  </article>
+  {%- endfor -%}
+
   {%- for item in site.data.shitpost -%}
   <article>
     <img src="{{ item.url | relative_url}}">
